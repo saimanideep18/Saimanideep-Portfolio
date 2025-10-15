@@ -1,7 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Saimanideep's portfolio/project page</title>
+    <meta
+      name="description"
+      content="Projects built by Saimanideep — web apps and demos."
+    />
+    <meta name="author" content="Saimanideep Ponamanda" />
+    <link rel="icon" type="image/svg+xml" href="Images/favicon.svg" />
+    <link rel="alternate icon" href="Images/favicon.svg" />
   </head>
   <body class="body">
     <div class="color-overlay"></div>
@@ -24,7 +33,6 @@
           <li><a href="contact.html" class="navbar-info">Contact</a></li>
         </ul>
       </div>
-      
     </div>
     <div class="bahu-over">
       <div>
@@ -41,7 +49,7 @@
         <h5 class="tech">Tech Used: HTML, CSS</h5>
         <a
           class="link"
-          href="https://baahubali-bookmyshow-clone.vercel.app" 
+          href="https://baahubali-bookmyshow-clone.vercel.app"
           target="_blank"
           ><button class="butt">🔗 View Project</button></a
         >
@@ -90,8 +98,8 @@
       </div>
     </div>
     <div class="social">
-        <p class="copy">© 2025 Saimanideep Ponamanda. All rights reserved.</p>
-      </div>
+      <p class="copy">© 2025 Saimanideep Ponamanda. All rights reserved.</p>
+    </div>
   </body>
 </html>
 
@@ -372,49 +380,49 @@
   .logo {
     width: 100px;
   }
-.social {
-  width: 100%;
-  border-top: 0.2px solid #ffffff66;
-  border-radius: 10px;
-  height: 10px;
-  color: white;
-  text-align: center;
-  margin-top: 50px;
-}
+  .social {
+    width: 100%;
+    border-top: 0.2px solid #ffffff66;
+    border-radius: 10px;
+    height: 10px;
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+  }
 
-.copy {
-  color: gray;
-  padding-top: 10px;
-  font-size: 14px;
-  padding-bottom: 10px;
-}
-@keyframes fadeInUp {
-  0% {
+  .copy {
+    color: gray;
+    padding-top: 10px;
+    font-size: 14px;
+    padding-bottom: 10px;
+  }
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .bahu-over,
+  .rcb-overall,
+  .port-over {
     opacity: 0;
-    transform: translateY(40px);
+    animation: fadeInUp 1s ease forwards;
   }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
+
+  .bahu-over {
+    animation-delay: 0.1s;
   }
-}
 
-.bahu-over,
-.rcb-overall,
-.port-over {
-  opacity: 0;
-  animation: fadeInUp 1s ease forwards;
-}
+  .rcb-overall {
+    animation-delay: 0.3s;
+  }
 
-.bahu-over {
-  animation-delay: 0.1s;
-}
-
-.rcb-overall {
-  animation-delay: 0.3s;
-}
-
-.port-over {
-  animation-delay: 0.5s;
-}
+  .port-over {
+    animation-delay: 0.5s;
+  }
 </style>

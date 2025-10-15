@@ -1,7 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Saimanideep's portfolio/about</title>
+    <meta
+      name="description"
+      content="About Saimanideep Ponamanda — background and interests."
+    />
+    <meta name="author" content="Saimanideep Ponamanda" />
+    <link rel="icon" type="image/svg+xml" href="Images/favicon.svg" />
+    <link rel="alternate icon" href="Images/favicon.svg" />
   </head>
   <body class="body">
     <div class="color-overlay"></div>
@@ -23,8 +32,8 @@
         </ul>
       </div>
     </div>
-      <div class="boxes">
-          <div class="who-box">
+    <div class="boxes">
+      <div class="who-box">
         <h3 class="who">🧑‍💼 Who I Am</h3>
         <p class="ans">
           Hi! I'm Saimanideep Ponamanda, an aspiring full-stack developer
@@ -37,7 +46,7 @@
         <h3 class="journey">🚀 MY TECH JOURNEY</h3>
         <p class="ans-tech">
           My journey in tech began with curiosity and quickly grew into a
-          passion for building web applications.  I enjoy learning by
+          passion for building web applications. I enjoy learning by
           doing—following tutorials and building projects that help me
           understand how real-world applications work
         </p>
@@ -58,12 +67,11 @@
           creativity when working on tech projects.
         </p>
       </div>
-      </div>
-    
-      <div class="about-image">
-        <img class="photo" src="Images/333.jpg" alt="About Me Photo" />
-      </div>
-    
+    </div>
+
+    <div class="about-image">
+      <img class="photo" src="Images/333.jpg" alt="About Me Photo" />
+    </div>
 
     <div class="social">
       <p class="copy">© 2025 Saimanideep Ponamanda. All rights reserved.</p>
@@ -72,192 +80,213 @@
 </html>
 
 <style>
- @keyframes popIn {
-  0% {
-    transform: scale(0.8);
+  @keyframes popIn {
+    0% {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  .body {
+    margin: 0;
+    padding: 0;
+    background-color: #0f0f0f;
+    font-family: sans-serif;
+    height: 500px;
+  }
+
+  .color-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, #ff6ec4, #7873f5, #4ade80, #facc15);
+    background-size: 400% 400%;
+    animation: gradientFlow 20s ease infinite;
+    opacity: 0.05;
+    z-index: -1;
+  }
+
+  @keyframes gradientFlow {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .navbar {
+    background-color: #faf8f1;
+    color: black;
+    align-items: center;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    height: 35px;
+    z-index: 10;
+  }
+
+  .navbar ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .navbar-info {
+    text-decoration: none;
+    color: black;
+    margin-right: 30px;
+    padding: 5px 10px;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+
+  .navbar-info:hover {
+    box-shadow: 1px 1px 5px rgba(181, 22, 22, 0.5);
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .navbar-info.active::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+  }
+
+  .logo {
+    width: 100px;
+  }
+
+  .boxes {
+    margin-top: 75px;
+    margin-bottom: 20px;
+  }
+
+  .who-box,
+  .journey-box,
+  .skill-box,
+  .beyond-box {
+    width: 600px;
+    border: solid 1px;
+    padding-left: 30px;
+    padding-right: 20px;
+    border-radius: 20px;
+    margin-left: 20px;
+    margin-top: 25px;
+    text-align: center;
+    cursor: pointer;
+    animation: popIn 0.6s ease forwards;
     opacity: 0;
   }
-  100% {
-    transform: scale(1);
-    opacity: 1;
+
+  .who-box {
+    animation-delay: 0.2s;
   }
-}
+  .journey-box {
+    animation-delay: 0.4s;
+  }
+  .skill-box {
+    animation-delay: 0.6s;
+  }
+  .beyond-box {
+    animation-delay: 0.8s;
+  }
 
-.body {
-  margin: 0;
-  padding: 0;
-  background-color: #0f0f0f;
-  font-family: sans-serif;
-  height: 500px;
-}
+  .who-box {
+    box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.8),
+      -3px -3px 8px rgba(0, 0, 0, 0.8);
+  }
 
-.color-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(120deg, #ff6ec4, #7873f5, #4ade80, #facc15);
-  background-size: 400% 400%;
-  animation: gradientFlow 20s ease infinite;
-  opacity: 0.05;
-  z-index: -1;
-}
+  .journey-box {
+    box-shadow: 2px 2px 5px #090909, -2px -2px 5px #8cb9bd;
+  }
 
-@keyframes gradientFlow {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
+  .skill-box {
+    box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.8),
+      -3px -3px 8px rgba(0, 0, 0, 0.8);
+  }
 
-.navbar {
-  background-color: #faf8f1;
-  color: black;
-  align-items: center;
-  padding: 10px 20px;
-  display: flex;
-  justify-content: space-between;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-  height: 35px;
-  z-index: 10;
-}
+  .beyond-box {
+    box-shadow: 2px 2px 5px #090909, -2px -2px 5px #8cb9bd;
+  }
 
-.navbar ul {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
+  .who,
+  .journey,
+  .skills,
+  .beyond {
+    color: white;
+    font-size: 15px;
+  }
 
-.navbar-info {
-  text-decoration: none;
-  color: black;
-  margin-right: 30px;
-  padding: 5px 10px;
-  position: relative;
-  transition: all 0.3s ease;
-}
+  .ans,
+  .ans-tech,
+  .ans-skill,
+  .ans-beyond {
+    width: 600px;
+    font-size: 15px;
+    color: #c9cbff;
+  }
 
-.navbar-info:hover {
-  box-shadow: 1px 1px 5px rgba(181, 22, 22, 0.5);
-  padding-left: 20px;
-  padding-right: 20px;
-}
+  .ans-tech,
+  .ans-beyond {
+    color: #b9d3d6;
+  }
 
-.navbar-info.active::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: black;
-  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
-}
+  .about-image {
+    position: fixed;
+    top: 50px;
+    right: 60px;
+  }
 
-.logo {
-  width: 100px;
-}
+  .photo {
+    width: 400px;
+    margin-top: 85px;
+    margin-left: 790px;
+    border-radius: 40px;
+    box-shadow: 1px 1px 5px #d7d0d7, -1px -1px 10px #78487c;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
 
-.boxes {
-  margin-top: 75px;
-  margin-bottom: 20px;
-}
+  .photo:hover {
+    transform: scale(1.02);
+    box-shadow: 2px 2px 15px #d7d0d7, -2px -2px 15px #78487c;
+  }
 
-.who-box,
-.journey-box,
-.skill-box,
-.beyond-box {
-  width: 600px;
-  border: solid 1px;
-  padding-left: 30px;
-  padding-right: 20px;
-  border-radius: 20px;
-  margin-left: 20px;
-  margin-top: 25px;
-  text-align: center;
-  cursor: pointer;
-  animation: popIn 0.6s ease forwards;
-  opacity: 0;
-}
+  .social {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    border: 0.2px solid #ffffff66;
+    border-radius: 10px;
+    height: 40px;
+    color: white;
+  }
 
-.who-box { animation-delay: 0.2s; }
-.journey-box { animation-delay: 0.4s; }
-.skill-box { animation-delay: 0.6s; }
-.beyond-box { animation-delay: 0.8s; }
-
-
-
-.who-box {
-  box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.8), -3px -3px 8px rgba(0, 0, 0, 0.8);
-}
-
-.journey-box {
-  box-shadow: 2px 2px 5px #090909, -2px -2px 5px #8CB9BD;
-}
-
-.skill-box {
-  box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.8), -3px -3px 8px rgba(0, 0, 0, 0.8);
-}
-
-.beyond-box {
-  box-shadow: 2px 2px 5px #090909, -2px -2px 5px #8CB9BD;
-}
-
-.who, .journey, .skills, .beyond {
-  color: white;
-  font-size: 15px;
-}
-
-.ans, .ans-tech, .ans-skill, .ans-beyond {
-  width: 600px;
-  font-size: 15px;
-  color: #C9CBFF;
-}
-
-.ans-tech, .ans-beyond {
-  color: #b9d3d6;
-}
-
-.about-image {
-  position: fixed;
-  top: 50px;
-  right: 60px;
-}
-
-.photo {
-  width: 400px;
-  margin-top: 85px;
-  margin-left: 790px;
-  border-radius: 40px;
-  box-shadow: 1px 1px 5px #d7d0d7, -1px -1px 10px #78487c;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.photo:hover {
-  transform: scale(1.02);
-  box-shadow: 2px 2px 15px #d7d0d7, -2px -2px 15px #78487c;
-}
-
-.social {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  border: 0.2px solid #ffffff66;
-  border-radius: 10px;
-  height: 40px;
-  color: white;
-}
-
-.copy {
-  padding-left: 430px;
-  color: gray;
-  padding-bottom: 20px;
-}
+  .copy {
+    padding-left: 430px;
+    color: gray;
+    padding-bottom: 20px;
+  }
 </style>
