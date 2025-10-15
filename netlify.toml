@@ -1,0 +1,14 @@
+[build]
+  publish = "src"
+  command = ""
+
+[dev]
+  publish = "src"
+
+[redirects]
+# Catch-all redirect (useful if you later add client-side routing)
+# This is disabled by default; uncomment if you need SPA routing.
+#  [[redirects]]
+#    from = "/*"
+#    to = "/index.html"
+#    status = 200
