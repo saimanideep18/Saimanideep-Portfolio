@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Saimanideep's Portfolio | Education</title>
+    <link rel="stylesheet" href="education.css" />
+  </head>
+  <body class="body">
+    <div class="color-overlay"></div>
+
+    <div class="navbar">
+      <div class="log">
+        <img class="logo" src="Images/logo.png" />
+      </div>
+      <div>
+        <ul>
+          <li><a href="homepage.html" class="navbar-info">Home</a></li>
+          <li><a href="aboutme.html" class="navbar-info">About</a></li>
+          <li><a href="skills.html" class="navbar-info">Skills</a></li>
+          <li><a href="projects.html" class="navbar-info">Projects</a></li>
+          <li><a href="education.html" class="navbar-info active">Education</a></li>
+          <li><a href="achievements.html" class="navbar-info">Achievements</a></li>
+          <li><a href="contact.html" class="navbar-info">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="education-boxes">
+      <div class="btech btech-1">
+        <div>
+          <img class="no" src="Images/ggu.jpeg" />
+        </div>
+        <div class="b">
+          <h3>Bachelor of Technology (B.Tech) in Computer Science and Engineering</h3>
+          <h4>Godavari Global University</h4>
+          <h5>2024–2028</h5>
+        </div>
+      </div>
+
+      <div class="btech btech-2">
+        <div>
+          <img class="no" src="Images/vidyavikas.webp" />
+        </div>
+        <div class="b">
+          <h3>Intermediate (MPC Stream)</h3>
+          <h4>Vidyavikas Junior College</h4>
+          <h5>2022–2024</h5>
+        </div>
+      </div>
+
+      <div class="btech btech-3">
+        <div>
+          <img class="no" src="Images/school.png" />
+        </div>
+        <div class="b">
+          <h3>Secondary Education</h3>
+          <h4>Sri Suryathej School</h4>
+          <h5>2021–2022</h5>
+        </div>
+      </div>
+    </div>
+
+    <div class="social">
+      <p class="copy">© 2025 Saimanideep Ponamanda. All rights reserved.</p>
+    </div>
+  </body>
+</html>
+
+<style>
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes slideDownFade {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.body {
+  margin: 0;
+  padding: 0;
+  background-color: #0f0f0f;
+  font-family: sans-serif;
+}
+
+.color-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, #ff6ec4, #7873f5, #4ade80, #facc15);
+  background-size: 400% 400%;
+  animation: gradientFlow 20s ease infinite;
+  opacity: 0.05;
+  z-index: -1;
+}
+
+.navbar {
+  background-color: #faf8f1;
+  color: black;
+  align-items: center;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  height: 35px;
+  z-index: 10;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-info {
+  text-decoration: none;
+  color: black;
+  margin-right: 30px;
+  padding: 5px 10px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.navbar-info:hover {
+  box-shadow: 1px 1px 5px rgba(181, 22, 22, 0.5);
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.navbar-info.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+  width: 100px;
+}
+
+.education-boxes {
+  margin-top: 80px;
+  padding: 20px;
+}
+
+/* Initial hidden state + animation */
+.btech {
+  display: flex;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-50px);
+  animation: slideDownFade 0.6s ease forwards;
+  animation-fill-mode: forwards;
+  margin-bottom: 30px;
+}
+
+/* Staggered delays */
+.btech-1 { animation-delay: 0.2s; }
+.btech-2 { animation-delay: 0.4s; }
+.btech-3 { animation-delay: 0.6s; }
+
+.b {
+  color: white;
+  margin-top: 40px;
+  margin-left: 80px;
+  border: solid 1px #b0ce88;
+  width: 700px;
+  padding: 20px 40px;
+  border-radius: 20px;
+  box-shadow: 2px 2px 5px #b0ce88, -2px -2px 5px #b0ce88;
+  height: 150px;
+  cursor: pointer;
+}
+
+.b:hover {
+  box-shadow: 2px 2px 10px #b0ce88, -2px -2px 10px #b0ce88;
+  transform: scale(1.02);
+}
+
+.no {
+  width: 300px;
+  margin-top: 37px;
+  margin-left: 20px;
+  border-radius: 10px;
+  height: 200px;
+  object-fit: cover;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8), -2px -2px 5px rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+}
+
+.no:hover {
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8), -2px -2px 10px rgba(0, 0, 0, 0.8);
+  transform: scale(1.03);
+}
+
+.social {
+  width: 100%;
+  border-top: 0.2px solid #ffffff66;
+  border-radius: 10px;
+  height: 10px;
+  color: white;
+  text-align: center;
+  margin-top: 80px;
+}
+
+.copy {
+  color: gray;
+  padding-top: 10px;
+  font-size: 14px;
+  padding-bottom: 10px;
+}
+</style>
